@@ -1,0 +1,564 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Versatile Metro-UI Angular Theme</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div ng-app="MyForm" ng-controller="EditController">
+        <div class="row editConfig-frame">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                <div class="panel panel-orange">
+                    <div class="panel-heading">Edit Configuration</div>
+                    <div class="panel-body pan">
+                        <form action="#">
+                            <div class="form-body pal">
+                                <div class="form-group">
+                                    <div class="input-icon right">
+                                        <input id="inputName" type="text" placeholder="Title" ng-model="configuration.title" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon right">
+                                        <input id="inputEmail" type="text" placeholder="Description" ng-model="configuration.description" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="createdBy-input-label">Created by:</label>
+                                    <select class="form-control">
+                                        <option value="0">Marina Stevanovic</option>
+                                        <option value="1">Milos Davitkovic</option>
+                                        <option value="2">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon right">
+                                        <!--                                    <i class="fa fa-envelope"></i>-->
+                                        <input id="inputEmail" type="text" placeholder="Create Date" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="inputLastName" type="text" placeholder="Expiration Date" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="inputLastName" type="text" placeholder="Expiration Date" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default ">
+                                    <div class="panel-heading">
+                                        <div class="col-lg-6">
+                                            <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Select Application</a>
+        </h4>
+                                        </div>
+                                        <div class="search-panel-heading col-lg-5">
+                                            <form class="navbar-form navbar-left" role="search">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control search-panel" placeholder="Search">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="search-panel-submit col-lg-1 col-lg-offset-0">
+                                            <button type="submit" class="btn btn-default btn-search"><i class=" fa fa-search "></i></button>
+                                        </div>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="input-group app-check col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row head-row-checkbox-group">
+                                                    <div class="col-lg-2 col-edit-checkbox">
+                                                        <span class="input-group-addon">
+<!--                                               <input class="edit-checkbox" type="checkbox" aria-label="...">-->
+                                            </span>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <span class="checkbox-text">
+                                                <h4>Name</h4>
+                                            </span>
+                                                    </div>
+
+                                                    <div class="col-lg-2">
+                                                        <h4>Details</h4>
+                                                    </div>
+
+                                                </div>
+                                                <div class="panel-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Windows Mobile application</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Android application</h4>
+                                            </span>
+                                                        </div>
+
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>IOS application</h4>
+                                            </span>
+                                                        </div>
+
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="col-lg-6">
+                                            <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Select Device</a>
+        </h4>
+                                        </div>
+                                        <div class="search-panel-heading col-lg-5 ">
+                                            <form class="" role="search">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control search-panel" placeholder="Search">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="search-panel-submit col-lg-1">
+                                            <button type="submit" class="btn btn-default btn-search"><i class=" fa fa-search "></i></button>
+                                        </div>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="input-group app-check col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row head-row-checkbox-group">
+                                                    <div class="col-lg-2 col-edit-checkbox">
+                                                        <span class="input-group-addon">
+<!--                                             <input class="edit-checkbox" type="checkbox" aria-label="...">-->
+                                            </span>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <span class="checkbox-text">
+                                                <h4>Name</h4>
+                                            </span>
+                                                    </div>
+
+                                                    <div class="col-lg-2">
+                                                        <h4>Details</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Wunderbar</h4>
+                                            </span>
+                                                        </div>
+
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Wunderbar 1</h4>
+                                            </span>
+                                                        </div>
+
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Wunderbar 1</h4>
+                                            </span>
+                                                        </div>
+
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Wunderbar 1</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="panel panel-default ">
+                                    <div class="panel-heading">
+                                        <div class="col-lg-6">
+                                            <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Quolifiers</a>
+        </h4>
+                                        </div>
+                                        <div class="search-panel-heading col-lg-5 ">
+                                            <form class="" role="search">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control search-panel" placeholder="Search">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="search-panel-submit col-lg-1 col-lg-offset-0">
+                                            <button type="submit" class="btn btn-default btn-search"><i class=" fa fa-search "></i></button>
+                                        </div>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="input-group app-check col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row head-row-checkbox-group">
+                                                    <div class="col-lg-2 col-edit-checkbox">
+                                                        <span class="input-group-addon">
+<!--                                                       <input class="edit-checkbox" type="checkbox" aria-label="...">-->
+                                                    </span>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <span class="checkbox-text">
+                                                        <h4>Name</h4>
+                                                    </span>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <h4>Details</h4>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <h4>Functions</h4>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <h4>References</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <span class="checkbox-text">
+                                                <h4>Q1</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#quolifiers-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <span class="checkbox-text">
+                                                <h4>distance</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#fn-distance-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-wrench"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <span class="checkbox-text">
+                                                <h4>Q2</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#quolifiers-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <span class="checkbox-text">
+                                                <h4>range</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#fn-range-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-wrench"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <span class="checkbox-text">
+                                                <h4>Q3</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#quolifiers-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <span class="checkbox-text">
+                                                <h4>distance</h4>
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" data-toggle="modal" data-target="#fn-distance-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-wrench"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="panel panel-default ">
+                                    <div class="panel-heading">
+                                        <div class="col-lg-3">
+                                            <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Frequency</a>
+        </h4>
+                                        </div>
+                                        <!--
+                                   <div class="search-panel-heading col-lg-5 col-lg-offset-3 col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
+    <form class="" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control search-panel" placeholder="Search">
+        </div>
+
+    </form>
+</div>
+<div class="search-panel-submit col-lg-1 col-lg-offset-0">
+    <button type="submit" class="btn btn-default btn-search"><i class=" fa fa-search "></i></button>
+</div>
+-->
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="input-group app-check col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <!--
+                                              <div class="col-lg-12 col-edit-checkbox">
+    <span class="input-group-addon">
+                                               <input id="inputName" type="text" placeholder="Starting point" class="form-control" />
+                                            </span>
+</div>
+-->
+                                                    <div class="col-lg-7">
+                                                        <span class="input-group-addon">
+                                               <input id="inputName" type="text" placeholder="Frequency" class="form-control" />
+                                            </span>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="form-group">
+                                                            <h4 class="edit-input-label">Unit:</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option value="0">hour</option>
+                                                                <option value="1">minute</option>
+                                                                <option value="2">second</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="panel panel-default ">
+                                    <div class="panel-heading">
+                                        <div class="col-lg-3">
+                                            <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Member</a>
+        </h4>
+                                        </div>
+                                        <div class="search-panel-heading col-lg-5 col-lg-offset-3 col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
+                                            <form class="" role="search">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control search-panel" placeholder="Search">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="search-panel-submit col-lg-1 col-lg-offset-0">
+                                            <button type="submit" class="btn btn-default btn-search"><i class=" fa fa-search "></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div id="collapse5" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="input-group app-check col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row head-row-checkbox-group">
+                                                    <div class="col-lg-2 col-edit-checkbox">
+                                                        <span class="input-group-addon">
+<!--                                                <input class="edit-checkbox" type="checkbox" aria-label="...">-->
+                                            </span>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <span class="checkbox-text">
+                                                <h4>Member name</h4>
+                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Marina Stevanovic</h4>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Milos Davitkovic</h4>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Miroslav Naumovski</h4>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-edit-checkbox">
+                                                            <span class="input-group-addon">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <span class="checkbox-text">
+                                                <h4>Milos Zivkovic</h4>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group mbn checkbox-form">
+                                    <div class="checkbox checkbox-terms-conditions">
+                                        <label>
+                                            <input tabindex="5" type="checkbox" />&nbsp; I agree with the Terms and Conditions</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions text-right pal">
+
+                                <button type="button" class="btn btn-primary btn-form-submit" data-toggle="modal" data-target="#checkout-dialog">
+                                    Create</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-resource.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+        <script src="js/editController.js"></script>
+
+</body>
+
+</html>
