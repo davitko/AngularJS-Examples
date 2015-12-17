@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Versatile Metro-UI Angular Theme</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+ 
+    <link rel="stylesheet" href="css/style.css">
+   
+  </head>
+  <body>
+ <!-- Declare a new AngularJS app and associate the controller -->
+<form id="main" ng-app="MyApp" ng-controller="MyController">
+			<h1>My Services</h1>
+
+			<ul id="services">
+				<!-- The services will be inserted here -->
+				<li ng-repeat="service in services">
+					<label>
+						<input type="checkbox" ng-model="service.selected" value="1" name="{{service.title}}" />
+						{{service.title}}<span>${{service.price}}</span>
+					</label>
+				</li>
+			</ul>
+
+			<p id="total">total: <span>${{total()}}</span></p>
+
+			<input type="submit" id="order" value="Order"/>
+
+		</form>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+
+  </body>
+</html>
