@@ -5,7 +5,17 @@
 	position:relative;
 	overflow:hidden;
 }
+.container2{
 
+	/* Calculate the width */
+	width: calc(100% - 40px);
+
+	background-color:#CDEBC4;
+	color:#6D8B64;
+	text-align:center;
+	padding:25px 0;
+	margin: 0 auto;
+}
 .planet{
 	position:absolute;
 	top:0;
