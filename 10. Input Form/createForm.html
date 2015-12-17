@@ -7,8 +7,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -41,15 +42,34 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="input-icon right">
-                                        <input id="inputEmail" type="text" placeholder="Create Date" class="form-control" />
+                                        <label class="createdBy-input-label">Create Date:</label>
+                                        <p class="input-group">
+                                            <input type="text" placeholder="Create Date" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" ng-model="configuration.createDate" />
+                                            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                                        </p>
                                     </div>
+                                    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+                                    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input id="inputLastName" type="text" placeholder="Expiration Date" class="form-control" />
-                                        </div>
+                                        <!--
+                                      <div class="form-group">
+    <div class="input-icon right">
+        <p class="input-group">
+            <input type="text" placeholder="Expriration Date" ng-model="configuration.createDate" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+    </div>
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+</div>
+-->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -822,6 +842,7 @@
 
         <script src="js/angular.min.js"></script>
         <script src="js/angular-resource.min.js"></script>
+        <script src="js/angular-animate.js"></script>
         <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

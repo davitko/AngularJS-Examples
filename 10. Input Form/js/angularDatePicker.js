@@ -1,24 +1,5 @@
-var app = angular.module("MyForm", ['ui.bootstrap']);
-
-app.controller('CreateController', ['$scope', function ($scope) {
-
-
-
-
-
-
-    $scope.blankConfig = {};
-
-    $scope.reset = function () {
-        $scope.configuration = angular.copy($scope.blankConfig);
-    };
-
-    $scope.reset();
-
-
-
-
-
+angular.module('MyForm', ['ngAnimate', 'ui.bootstrap']);
+angular.module('MyForm').controller('DatePickerCtrl', function ($scope) {
     $scope.today = function () {
         $scope.dt = new Date();
     };
@@ -89,5 +70,4 @@ app.controller('CreateController', ['$scope', function ($scope) {
 
         return '';
     };
-
-}])
+});
