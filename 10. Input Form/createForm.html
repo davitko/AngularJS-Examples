@@ -128,55 +128,20 @@
 
                                                 </div>
                                                 <div class="panel-content">
-                                                    <div class="row">
+                                                    <div class="row" ng-repeat="app in configuration.apps">
                                                         <div class="col-lg-2 col-edit-checkbox">
                                                             <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
+                                                <input class="edit-checkbox" type="checkbox" aria-label="..." ng-model="configuration.app">
                                             </span>
                                                         </div>
                                                         <div class="col-lg-8">
                                                             <span class="checkbox-text">
-                                                <h4>Windows Mobile application</h4>
+                                                <h4>{{app.description}}</h4>
                                             </span>
                                                         </div>
                                                         <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                            <button type="button" data-toggle="modal" ng-click="details('app', {param: app.id})" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
                                                         </div>
-
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-2 col-edit-checkbox">
-                                                            <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-8">
-                                                            <span class="checkbox-text">
-                                                <h4>Android application</h4>
-                                            </span>
-                                                        </div>
-
-                                                        <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-2 col-edit-checkbox">
-                                                            <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-8">
-                                                            <span class="checkbox-text">
-                                                <h4>IOS application</h4>
-                                            </span>
-                                                        </div>
-
-                                                        <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#app-detail" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
-                                                        </div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -208,7 +173,6 @@
                                                 <div class="row head-row-checkbox-group">
                                                     <div class="col-lg-2 col-edit-checkbox">
                                                         <span class="input-group-addon">
-<!--                                             <input class="edit-checkbox" type="checkbox" aria-label="...">-->
                                             </span>
                                                     </div>
                                                     <div class="col-lg-8">
@@ -222,7 +186,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="panel-content">
-                                                    <div class="row">
+                                                    <div class="row" ng-repeat="device in configuration.devices">
                                                         <div class="col-lg-2 col-edit-checkbox">
                                                             <span class="input-group-addon">
                                                 <input class="edit-checkbox" type="checkbox" aria-label="...">
@@ -230,62 +194,16 @@
                                                         </div>
                                                         <div class="col-lg-8">
                                                             <span class="checkbox-text">
-                                                <h4>Wunderbar</h4>
+                                                <h4>{{device.description}}</h4>
                                             </span>
                                                         </div>
 
                                                         <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
+                                                            <button type="button" data-toggle="modal" ng-click="details('device', {param: device.id})" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
                                                         </div>
 
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-2 col-edit-checkbox">
-                                                            <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-8">
-                                                            <span class="checkbox-text">
-                                                <h4>Wunderbar 1</h4>
-                                            </span>
-                                                        </div>
 
-                                                        <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-2 col-edit-checkbox">
-                                                            <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-8">
-                                                            <span class="checkbox-text">
-                                                <h4>Wunderbar 1</h4>
-                                            </span>
-                                                        </div>
-
-                                                        <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-2 col-edit-checkbox">
-                                                            <span class="input-group-addon">
-                                                <input class="edit-checkbox" type="checkbox" aria-label="...">
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-8">
-                                                            <span class="checkbox-text">
-                                                <h4>Wunderbar 1</h4>
-                                            </span>
-                                                        </div>
-                                                        <div class="col-lg-2">
-                                                            <button type="button" data-toggle="modal" data-target="#device-details" class="btn btn-default btn-troubleshoot-answer"><i class="fa fa-bars"></i></button>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -297,7 +215,7 @@
                                     <div class="panel-heading">
                                         <div class="col-lg-6">
                                             <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Quolifiers</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Qualifiers</a>
         </h4>
                                         </div>
                                         <div class="search-panel-heading col-lg-5 ">
@@ -638,11 +556,11 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="active">
-                                                    <td>1</td>
-                                                    <td>123</td>
-                                                    <td>Windows Mobile Application</td>
-                                                    <td>LANCE</td>
-                                                    <td>#windows #mobile #app</td>
+                                                    <td>{{detailData.id}}</td>
+                                                    <td>{{detailData.code}}</td>
+                                                    <td>{{detailData.description}}</td>
+                                                    <td>{{detailData.company}}</td>
+                                                    <td>{{detailData.tags}}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -690,16 +608,16 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="active">
-                                                    <td>1</td>
-                                                    <td>123</td>
-                                                    <td>Wunderbar</td>
-                                                    <td>Environmental and Health care</td>
-                                                    <td>Het is al geruime tijd een</td>
-                                                    <td>Het is al geruime tijd een</td>
-                                                    <td>Het is al geruime tijd een</td>
-                                                    <td>Het is al geruime tijd een</td>
-                                                    <td>Het is al geruime tijd een</td>
-                                                    <td>Het is al geruime tijd een</td>
+                                                    <td>{{detailData.id}}</td>
+                                                    <td>{{detailData.code}}</td>
+                                                    <td>{{detailData.description}}</td>
+                                                    <td>{{detailData.category}}</td>
+                                                    <td>{{detailData.group}}</td>
+                                                    <td>{{detailData.type}}</td>
+                                                    <td>{{detailData.function}}</td>
+                                                    <td>{{detailData.valorization}}</td>
+                                                    <td>{{detailData.troubleshooting}}</td>
+                                                    <td>{{detailData.sensor}}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

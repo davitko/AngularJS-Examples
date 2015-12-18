@@ -157,4 +157,193 @@ app.controller('CreateController', ['$scope', function ($scope) {
         return '';
     };
 
+
+    //    Demo Data
+    //Applications
+    $scope.configuration.apps = [
+        {
+            id: '0',
+            dataType: 'app',
+            code: '0001',
+            description: 'Windows Mobile application',
+            company: 'LANCEict',
+            tags: '#windows #mobile #app'
+        },
+        {
+            id: '1',
+            dataType: 'app',
+            code: '0002',
+            description: 'Android application',
+            company: 'LANCEict',
+            tags: '#android #mobile #app'
+        },
+        {
+            id: '2',
+            dataType: 'app',
+            code: '0003',
+            description: 'IOS application',
+            company: 'LANCEict',
+            tags: '#ios #mobile #app'
+        },
+        {
+            id: '3',
+            dataType: 'app',
+            code: '0004',
+            description: 'Windows application',
+            company: 'LANCEict',
+            tags: '#Windows #desktop #app'
+        },
+    ]
+
+    $scope.detailData = [];
+
+    $scope.details = function (type, id) {
+            console.log(id.param);
+
+            switch (type) {
+            case 'app':
+                $scope.detailData.id = $scope.configuration.apps[id.param].id,
+                    $scope.detailData.type = $scope.configuration.apps[id.param].dataType,
+                    $scope.detailData.code = $scope.configuration.apps[id.param].code,
+                    $scope.detailData.description = $scope.configuration.apps[id.param].description,
+                    $scope.detailData.company = $scope.configuration.apps[id.param].company,
+                    $scope.detailData.tags = $scope.configuration.apps[id.param].tags
+
+                console.log($scope.detailData);
+                break;
+            case 'device':
+                $scope.detailData.id = $scope.configuration.devices[id.param].id,
+                    $scope.detailData.dataType = $scope.configuration.devices[id.param].dataType,
+                    $scope.detailData.code = $scope.configuration.devices[id.param].code,
+                    $scope.detailData.description = $scope.configuration.devices[id.param].description,
+                    $scope.detailData.category = $scope.configuration.devices[id.param].category,
+                    $scope.detailData.group = $scope.configuration.devices[id.param].group,
+                    $scope.detailData.type = $scope.configuration.devices[id.param].type,
+                    $scope.detailData.function = $scope.configuration.devices[id.param].function,
+                    $scope.detailData.valorization = $scope.configuration.devices[id.param].valorization,
+                    $scope.detailData.troubleshooting = $scope.configuration.devices[id.param].troubleshooting,
+                    $scope.detailData.sensor = $scope.configuration.devices[id.param].sensor
+
+                console.log($scope.detailData);
+                break;
+            case 'qualifiers':
+
+                break;
+            default:
+
+            }
+
+        }
+        //    $scope.details();
+        //Devices
+    $scope.configuration.devices = [
+            {
+                id: '0',
+                dataType: 'device',
+                code: '0001',
+                description: 'Wunderbar',
+                category: 'Environmental and Health care',
+                group: 'Het is al geruime tijd een',
+                type: 'Het is al geruime tijd een',
+                function: 'Het is al geruime tijd een',
+                valorization: 'Het is al geruime tijd een',
+                troubleshooting: 'Het is al geruime tijd een',
+                sensor: 'Het is al geruime tijd een'
+        },
+            {
+                id: '1',
+                dataType: 'device',
+                code: '0002',
+                description: 'Wunderbar2',
+                category: 'Environmental and Health care',
+                group: 'Het is al geruime tijd een',
+                type: 'Het is al geruime tijd een',
+                function: 'Het is al geruime tijd een',
+                valorization: 'Het is al geruime tijd een',
+                troubleshooting: 'Het is al geruime tijd een',
+                sensor: 'Het is al geruime tijd een'
+        },
+            {
+                id: '2',
+                dataType: 'device',
+                code: '0003',
+                description: 'Wunderbar3',
+                category: 'Environmental and Health care',
+                group: 'Het is al geruime tijd een',
+                type: 'Het is al geruime tijd een',
+                function: 'Het is al geruime tijd een',
+                valorization: 'Het is al geruime tijd een',
+                troubleshooting: 'Het is al geruime tijd een',
+                sensor: 'Het is al geruime tijd een'
+        },
+            {
+                id: '3',
+                dataType: 'device',
+                code: '0004',
+                description: 'Wunderbar4',
+                category: 'Environmental and Health care',
+                group: 'Het is al geruime tijd een',
+                type: 'Het is al geruime tijd een',
+                function: 'Het is al geruime tijd een',
+                valorization: 'Het is al geruime tijd een',
+                troubleshooting: 'Het is al geruime tijd een',
+                sensor: 'Het is al geruime tijd een'
+        },
+    ]
+        //    Qualifiers
+    $scope.configuration.qualifiers = [
+        {
+            id: '0',
+            dataType: 'qualifiers',
+            code: '0001',
+            description: 'Q1',
+            category: 'A',
+            group: 'Het is al geruime tijd een',
+            type: 'Het is al geruime tijd een',
+            function: 'Het is al geruime tijd een',
+            valorization: 'Het is al geruime tijd een',
+            troubleshooting: 'Het is al geruime tijd een',
+            sensor: 'Het is al geruime tijd een'
+        },
+        {
+            id: '1',
+            dataType: 'qualifiers',
+            code: '0002',
+            description: 'Q2',
+            category: 'B',
+            group: 'Het is al geruime tijd een',
+            type: 'Het is al geruime tijd een',
+            function: 'Het is al geruime tijd een',
+            valorization: 'Het is al geruime tijd een',
+            troubleshooting: 'Het is al geruime tijd een',
+            sensor: 'Het is al geruime tijd een'
+        },
+        {
+            id: '2',
+            dataType: 'qualifiers',
+            code: '0003',
+            description: 'Q3',
+            category: 'A',
+            group: 'Het is al geruime tijd een',
+            type: 'Het is al geruime tijd een',
+            function: 'Het is al geruime tijd een',
+            valorization: 'Het is al geruime tijd een',
+            troubleshooting: 'Het is al geruime tijd een',
+            sensor: 'Het is al geruime tijd een'
+        },
+        {
+            id: '3',
+            dataType: 'qualifiers',
+            code: '0004',
+            description: 'Q4',
+            category: 'A',
+            group: 'Het is al geruime tijd een',
+            type: 'Het is al geruime tijd een',
+            function: 'Het is al geruime tijd een',
+            valorization: 'Het is al geruime tijd een',
+            troubleshooting: 'Het is al geruime tijd een',
+            sensor: 'Het is al geruime tijd een'
+        },
+    ]
+
 }])
