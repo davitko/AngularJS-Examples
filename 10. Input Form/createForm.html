@@ -44,36 +44,46 @@
                                     <div class="input-icon right">
                                         <label class="createdBy-input-label">Create Date:</label>
                                         <p class="input-group">
-                                            <input type="text" placeholder="Create Date" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" ng-model="configuration.createDate" />
+                                            <input type="text" placeholder="Create Date" class="form-control" uib-datepicker-popup="{{format}}" ng-model="configuration.createDate" is-open="status.create.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                                             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="open($event, 'create')"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
                                         </p>
                                     </div>
-                                    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
-                                    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+                                    <button type="button" class="btn btn-sm btn-info" ng-click="today('create')">Today</button>
+                                    <button type="button" class="btn btn-sm btn-danger" ng-click="clear('create')">Clear</button>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <!--
-                                      <div class="form-group">
-    <div class="input-icon right">
-        <p class="input-group">
-            <input type="text" placeholder="Expriration Date" ng-model="configuration.createDate" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-            <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        <div class="form-group">
+                                            <div class="input-icon right">
+                                                <label class="createdBy-input-label">Start Date:</label>
+                                                <p class="input-group">
+                                                    <input type="text" placeholder="Start Date" ng-model="configuration.startDate" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt.start" is-open="status.start.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                                                    <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event, 'start')"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
-        </p>
-    </div>
-    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
-    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
-</div>
--->
+                                                </p>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-info" ng-click="today('start')">Today</button>
+                                            <button type="button" class="btn btn-sm btn-danger" ng-click="clear('start')">Clear</button>
+                                        </div>
+
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input id="inputLastName" type="text" placeholder="Expiration Date" class="form-control" />
+                                            <div class="input-icon right">
+                                                <label class="createdBy-input-label">Expiration Date:</label>
+                                                <p class="input-group">
+                                                    <input type="text" placeholder="Start Date" ng-model="configuration.expirationDate" class="form-control" uib-datepicker-popup="{{format}}" is-open="status.expiration.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                                                    <span class="input-group-btn">
+               <button type="button" class="btn btn-default" ng-click="open($event, 'expiration')"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                                                </p>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-info" ng-click="today('expiration')">Today</button>
+                                            <button type="button" class="btn btn-sm btn-danger" ng-click="clear('expiration')">Clear</button>
                                         </div>
                                     </div>
                                 </div>
