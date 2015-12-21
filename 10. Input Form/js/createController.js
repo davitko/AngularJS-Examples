@@ -12,7 +12,7 @@ app.controller('CreateController', ['$scope', function ($scope) {
     };
 
     $scope.reset();
-    //--------------------------
+    //-------------------------
 
     // Date picker 
     $scope.today = function (whichDate) {

@@ -5,22 +5,29 @@ import {Component, View, bootstrap} from "angular2/angular2";
 
 @Component(
     {
-
-        selector: 'contact'
+        selector: "editor"
     })
 @View({
-        templateUrl: 'Contact.html'
+    templateUrl: "Editor.html"
 })
-  
-class Contact {
-    name: string;
-    email: string;
-    phone: string;
+
+class Editor {
+    showtooltip: boolean;
+    value: string;
+
     constructor() {
-        this.email = 'John.Doe@gmail.com';
-        this.name = 'John Doe';
-        this.phone = '1-800-GOOG';
+        this.showtooltip = false;
+        this.value = "Edit me.";
+    }
+
+    hideTooltip() {
+        this.showtooltip = false;
+    }
+
+    toggleTooltip(e) {
+        e.stopPropagation();
+        this.showtooltip = !this.showtooltip;
     }
 }
 
-bootstrap(Contact);
+bootstrap(Editor);

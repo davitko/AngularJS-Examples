@@ -10,3 +10,9 @@ D:\Download\Chrome\FirstAngular2App\FirstAngular2App\FirstAngular2App\bin\FirstA
 D:\Download\Chrome\FirstAngular2App\FirstAngular2App\FirstAngular2App\obj\Debug\FirstAngular2App.csprojResolveAssemblyReference.cache
 D:\Download\Chrome\FirstAngular2App\FirstAngular2App\FirstAngular2App\obj\Debug\FirstAngular2App.dll
 D:\Download\Chrome\FirstAngular2App\FirstAngular2App\FirstAngular2App\obj\Debug\FirstAngular2App.pdb
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\bin\FirstAngular2App.dll.config
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\bin\FirstAngular2App.dll
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\bin\FirstAngular2App.pdb
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\obj\Debug\FirstAngular2App.csprojResolveAssemblyReference.cache
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\obj\Debug\FirstAngular2App.dll
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular2 & Typescript\FirstAngular2App\obj\Debug\FirstAngular2App.pdb

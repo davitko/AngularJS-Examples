@@ -2,38 +2,42 @@
 /// <reference path="node_modules/angular2/bundles/typings/angular2/angular2.d.ts" />
 System.register(["angular2/angular2"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
-        switch (arguments.length) {
-            case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
-            case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
-            case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
-        }
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var angular2_1;
-    var Contact;
+    var Editor;
     return {
         setters:[
             function (angular2_1_1) {
                 angular2_1 = angular2_1_1;
             }],
         execute: function() {
-            Contact = (function () {
-                function Contact() {
-                    this.email = 'John.Doe@gmail.com';
-                    this.name = 'John Doe';
-                    this.phone = '1-800-GOOG';
+            Editor = (function () {
+                function Editor() {
+                    this.showtooltip = false;
+                    this.value = "Edit me.";
                 }
-                Contact = __decorate([
+                Editor.prototype.hideTooltip = function () {
+                    this.showtooltip = false;
+                };
+                Editor.prototype.toggleTooltip = function (e) {
+                    e.stopPropagation();
+                    this.showtooltip = !this.showtooltip;
+                };
+                Editor = __decorate([
                     angular2_1.Component({
-                        selector: 'contact'
+                        selector: "editor"
                     }),
                     angular2_1.View({
-                        templateUrl: 'Contact.html'
+                        templateUrl: "Editor.html"
                     })
-                ], Contact);
-                return Contact;
+                ], Editor);
+                return Editor;
             })();
-            angular2_1.bootstrap(Contact);
+            angular2_1.bootstrap(Editor);
         }
     }
 });
