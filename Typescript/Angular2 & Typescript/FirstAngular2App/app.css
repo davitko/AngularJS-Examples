@@ -1,0 +1,26 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color:white;
+}
+
+.contact {
+    border:solid 1px black;
+    background-color:lightblue;
+    max-width:400px;
+    padding:20px;
+}
+.contact div label{
+    font-weight:bold;
+   
+    text-align:right;
+    width:50px;
+    display:inline-block;
+
+}
+.contact div span{
+    
+    margin:10px;
+    text-align:left;
+    width:300px;
+
+}
