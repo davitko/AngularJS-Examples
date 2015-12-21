@@ -16,3 +16,9 @@ D:\Download\Chrome\AngularWithTypeScriptDemo\AngularWithTypeScriptDemo\AngularJS
 D:\Download\Chrome\AngularWithTypeScriptDemo\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.dll.config
 D:\Download\Chrome\AngularWithTypeScriptDemo\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.dll
 D:\Download\Chrome\AngularWithTypeScriptDemo\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.pdb
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.dll.config
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.dll
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\bin\AngularJSWithTypeScriptDemo.pdb
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\obj\Debug\AngularJSWithTypeScriptDemo.csprojResolveAssemblyReference.cache
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\obj\Debug\AngularJSWithTypeScriptDemo.dll
+D:\Work\5M\Demo Projects\practiceAngular\pages\AngularJS-Examples\Typescript\Angular & Typescript\AngularWithTypeScriptDemo\AngularJSWithTypeScriptDemo\obj\Debug\AngularJSWithTypeScriptDemo.pdb
