@@ -8,6 +8,7 @@ module angularWithTS.controllers {
         static $inject = ["angularWithTS.Services.PlayListService"];
         favorites: Array<angularWithTS.Interfaces.ITrack>;
         favoriteItem: angularWithTS.Interfaces.ITrack;
+        favoriteItemBlank: angularWithTS.Interfaces.ITrack;
 
         constructor(playListService: angularWithTS.Interfaces.IPlaylistService) {
 
@@ -15,21 +16,16 @@ module angularWithTS.controllers {
         }
 
 
-        addItem = () => {
-            //this.favorites = this.playListService.getPlayList();
-            this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
-            this.favorites.push(this.favoriteItem);
+        reset = () => {
+            this.favoriteItem = angular.copy(this.favoriteItemBlank);
 
         }
 
-        remove = (id) => {
-            this.favorites.splice(id, 1);
+        save = () => {
+            this.playListService.addItem(this.favoriteItem);
         }
 
-        removeLast = () => {
-            this.favorites.pop();
-        }
     }
 
-    angular.module("angularWithTS").controller("angularWithTS.controllers.tsDemoController", TSDemoController);
+    angular.module("angularWithTS").controller("angularWithTS.controllers.tsAddController", TSAddController);
 } 

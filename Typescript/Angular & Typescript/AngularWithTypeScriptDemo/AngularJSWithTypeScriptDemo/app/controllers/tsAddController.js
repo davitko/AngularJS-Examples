@@ -8,16 +8,11 @@ var angularWithTS;
         var TSAddController = (function () {
             function TSAddController(playListService) {
                 var _this = this;
-                this.addItem = function () {
-                    //this.favorites = this.playListService.getPlayList();
-                    _this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
-                    _this.favorites.push(_this.favoriteItem);
+                this.reset = function () {
+                    _this.favoriteItem = angular.copy(_this.favoriteItemBlank);
                 };
-                this.remove = function (id) {
-                    _this.favorites.splice(id, 1);
-                };
-                this.removeLast = function () {
-                    _this.favorites.pop();
+                this.save = function () {
+                    _this.playListService.addItem(_this.favoriteItem);
                 };
                 this.playListService = playListService;
             }
@@ -25,7 +20,7 @@ var angularWithTS;
             return TSAddController;
         })();
         controllers.TSAddController = TSAddController;
-        angular.module("angularWithTS").controller("angularWithTS.controllers.tsDemoController", controllers.TSDemoController);
+        angular.module("angularWithTS").controller("angularWithTS.controllers.tsAddController", TSAddController);
     })(controllers = angularWithTS.controllers || (angularWithTS.controllers = {}));
 })(angularWithTS || (angularWithTS = {}));
 //# sourceMappingURL=tsAddController.js.map

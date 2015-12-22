@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Add new Item</title>
 </head>
 <body>
     <div>
         <form novalidate>
             Artist:<br>
-            <input type="text" ng-model="favorites.artist"><br>
+            <input type="text" ng-model="add.favoriteItem.artist"><br>
             Title:<br>
-            <input type="text" ng-model="favorites.title">
+            <input type="text" ng-model="add.favoritesfavoriteItem.title">
             <br><br>
-            <button ng-click="reset()">Reset</button>
-            <button ng-click="save()">Save</button>
-            <a href="/home"></a> <button>Back</button>
+            <a href="#home"><button>Back</button></a>
+            <button ng-click="add.reset()">Reset</button>
+            <button ng-click="add.save()">Save</button>
         </form>
-        <p>form = {{user}}</p>
-        <p>master = {{master}}</p>
+
+        <p>{{add.favorites}}</p>
     </div>
 </body>
 </html>
