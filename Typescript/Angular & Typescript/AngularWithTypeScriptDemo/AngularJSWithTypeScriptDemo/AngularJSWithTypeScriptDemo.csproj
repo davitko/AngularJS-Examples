@@ -62,6 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\views\addItem.html" />
     <Content Include="app\views\playlist.html" />
     <Content Include="content\css\bootstrap-theme.css" />
     <Content Include="content\css\bootstrap-theme.min.css" />
@@ -85,6 +86,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routes.ts" />
+    <TypeScriptCompile Include="app\controllers\tsAddController.ts" />
     <TypeScriptCompile Include="app\interfaces\interfaces.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />

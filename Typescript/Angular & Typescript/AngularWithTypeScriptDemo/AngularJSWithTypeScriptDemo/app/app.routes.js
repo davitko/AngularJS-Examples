@@ -7,6 +7,7 @@ var angularWithTS;
         }
         Routes.configureRoutes = function ($routeProvider) {
             $routeProvider.when("/home", { controller: "angularWithTS.controllers.tsDemoController", templateUrl: "/app/views/playlist.html", controllerAs: "playList" });
+            $routeProvider.when("/add", { controller: "angularWithTS.controllers.tsAddController", templateUrl: "/app/views/addItem.html", controllerAs: "add" });
             $routeProvider.otherwise({ redirectTo: "/home" });
         };
         Routes.$inject = ["$routeProvider"];

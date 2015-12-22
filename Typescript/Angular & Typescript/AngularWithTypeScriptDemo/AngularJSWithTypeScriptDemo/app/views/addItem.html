@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <form novalidate>
+            Artist:<br>
+            <input type="text" ng-model="favorites.artist"><br>
+            Title:<br>
+            <input type="text" ng-model="favorites.title">
+            <br><br>
+            <button ng-click="reset()">Reset</button>
+            <button ng-click="save()">Save</button>
+            <a href="/home"></a> <button>Back</button>
+        </form>
+        <p>form = {{user}}</p>
+        <p>master = {{master}}</p>
+    </div>
+</body>
+</html>

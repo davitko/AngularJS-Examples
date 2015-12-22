@@ -5,13 +5,9 @@ var angularWithTS;
 (function (angularWithTS) {
     var controllers;
     (function (controllers) {
-        var TSDemoController = (function () {
-            function TSDemoController(playListService) {
+        var TSAddController = (function () {
+            function TSAddController(playListService) {
                 var _this = this;
-                this.getFavourites = function () {
-                    _this.favorites = _this.playListService.getPlayList();
-                    getFavouritesShow: false;
-                };
                 this.addItem = function () {
                     //this.favorites = this.playListService.getPlayList();
                     _this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
@@ -24,13 +20,12 @@ var angularWithTS;
                     _this.favorites.pop();
                 };
                 this.playListService = playListService;
-                getFavouritesShow: true;
             }
-            TSDemoController.$inject = ["angularWithTS.Services.PlayListService"];
-            return TSDemoController;
+            TSAddController.$inject = ["angularWithTS.Services.PlayListService"];
+            return TSAddController;
         })();
-        controllers.TSDemoController = TSDemoController;
-        angular.module("angularWithTS").controller("angularWithTS.controllers.tsDemoController", TSDemoController);
+        controllers.TSAddController = TSAddController;
+        angular.module("angularWithTS").controller("angularWithTS.controllers.tsDemoController", controllers.TSDemoController);
     })(controllers = angularWithTS.controllers || (angularWithTS.controllers = {}));
 })(angularWithTS || (angularWithTS = {}));
-//# sourceMappingURL=tsDemoController.js.map
+//# sourceMappingURL=tsAddController.js.map
