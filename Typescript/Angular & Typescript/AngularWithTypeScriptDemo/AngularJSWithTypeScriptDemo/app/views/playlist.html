@@ -1,8 +1,13 @@
 ﻿<div class="jumbotron">
     <ul class="list-group">
         <li ng-show="playList.favorites" class="list-group-item" ng-repeat="t in playList.favorites">
-            {{t.title}}
+            <th>{{t.artist}} - </th>
+            <th>{{t.title}};</th>
+            <th>Rating: {{t.rating}}</th>
+            <th><button type="button" ng-click="remove({param: t.id})" class=" btn btn-default">Remove</button></th>
         </li>
     </ul>
-    <button class="btn btn-block" ng-click="playList.getFavourites()">Get Favorites Tracks</button>
+    <!--<button class="btn btn-block" ng-show="getFavouritesShow" ng-click="playList.getFavourites()">Get Favorites Tracks</button>-->
+    <button class="btn btn-block" ng-click="playList.addItem()">Add Favorites Tracks</button>
+    <button class="btn btn-block" ng-click="playList.removeLast()">Remove Last Tracks</button>
 </div>

@@ -6,14 +6,35 @@ module angularWithTS.controllers {
 
         playListService: angularWithTS.Interfaces.IPlaylistService;
         static $inject = ["angularWithTS.Services.PlayListService"];
+        favorites: Array<angularWithTS.Interfaces.ITrack>;
+        favoriteItem: angularWithTS.Interfaces.ITrack;
+        getFavouritesShow: boolean;
         constructor(playListService: angularWithTS.Interfaces.IPlaylistService) {
 
             this.playListService = playListService;
+            this.favorites = this.playListService.getPlayList();
+            getFavouritesShow: true;
         }
-        favorites: Array<angularWithTS.Interfaces.ITrack>;
+
 
         getFavourites = () => {
-            this.favorites = this.playListService.getPlayList();
+
+            getFavouritesShow: false;
+        }
+
+        addItem = () => {
+            //this.favorites = this.playListService.getPlayList();
+            this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
+            this.favorites.push(this.favoriteItem);
+
+        }
+
+        remove = (id) => {
+            this.favorites.splice(id, 1);
+        }
+
+        removeLast = () => {
+            this.favorites.pop();
         }
     }
 

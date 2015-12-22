@@ -9,9 +9,22 @@ var angularWithTS;
             function TSDemoController(playListService) {
                 var _this = this;
                 this.getFavourites = function () {
-                    _this.favorites = _this.playListService.getPlayList();
+                    getFavouritesShow: false;
+                };
+                this.addItem = function () {
+                    //this.favorites = this.playListService.getPlayList();
+                    _this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
+                    _this.favorites.push(_this.favoriteItem);
+                };
+                this.remove = function (id) {
+                    _this.favorites.splice(id, 1);
+                };
+                this.removeLast = function () {
+                    _this.favorites.pop();
                 };
                 this.playListService = playListService;
+                this.favorites = this.playListService.getPlayList();
+                getFavouritesShow: true;
             }
             TSDemoController.$inject = ["angularWithTS.Services.PlayListService"];
             return TSDemoController;
