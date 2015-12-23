@@ -9,14 +9,15 @@
             Artist:<br>
             <input type="text" ng-model="add.favoriteItem.artist"><br>
             Title:<br>
-            <input type="text" ng-model="add.favoritesfavoriteItem.title">
-            <br><br>
+            <input type="text" ng-model="add.favoriteItem.title">
+            <br>Rating:<br>
+            <input type="text" ng-model="add.favoriteItem.rating"><br>
             <a href="#home"><button>Back</button></a>
             <button ng-click="add.reset()">Reset</button>
             <button ng-click="add.save()">Save</button>
         </form>
 
-        <p>{{add.favorites}}</p>
+        <p>{{add.favoriteItem}}</p>
     </div>
 </body>
 </html>

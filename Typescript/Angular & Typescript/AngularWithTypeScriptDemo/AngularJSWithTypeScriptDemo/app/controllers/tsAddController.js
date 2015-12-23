@@ -11,12 +11,17 @@ var angularWithTS;
                 this.reset = function () {
                     _this.favoriteItem = angular.copy(_this.favoriteItemBlank);
                 };
+                this.autoRedirect = function ($window) {
+                    $window.location.href = "#home";
+                };
                 this.save = function () {
                     _this.playListService.addItem(_this.favoriteItem);
                 };
                 this.playListService = playListService;
+                this.favoriteItemBlank = this.playListService.getBlank();
             }
             TSAddController.$inject = ["angularWithTS.Services.PlayListService"];
+            TSAddController.$injectWin = ["$window"];
             return TSAddController;
         })();
         controllers.TSAddController = TSAddController;

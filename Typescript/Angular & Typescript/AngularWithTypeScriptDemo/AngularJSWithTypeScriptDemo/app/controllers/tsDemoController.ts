@@ -12,21 +12,14 @@ module angularWithTS.controllers {
         constructor(playListService: angularWithTS.Interfaces.IPlaylistService) {
 
             this.playListService = playListService;
-
-            getFavouritesShow: true;
         }
 
+        startInit = () => {
+            this.favorites = this.playListService.getInitPlaylist();
+        }
 
         getFavourites = () => {
             this.favorites = this.playListService.getPlayList();
-            getFavouritesShow: false;
-        }
-
-        addItem = () => {
-            //this.favorites = this.playListService.getPlayList();
-            this.favoriteItem = { id: 4, title: "Boing 747", artist: "Ministarke", rating: 5 };
-            this.favorites.push(this.favoriteItem);
-
         }
 
         remove = (id) => {
