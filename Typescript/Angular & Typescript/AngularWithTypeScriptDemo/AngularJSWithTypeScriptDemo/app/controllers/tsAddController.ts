@@ -17,7 +17,6 @@ module angularWithTS.controllers {
             this.favoriteItemBlank = this.playListService.getBlank();
         }
 
-
         reset = () => {
             this.favoriteItem = angular.copy(this.favoriteItemBlank);
 
